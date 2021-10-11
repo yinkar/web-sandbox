@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Sandbox</title>
+	<style type="text/css">
+		.container {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+
+		.left, .right {
+			box-sizing: border-box;
+			width: 50vw;
+		}
+
+		.left {
+			font-family: sans-serif;
+		}
+
+		.code-area {
+			box-sizing: border-box;
+			width: 100%;
+		}
+
+		.code-area h3 {
+			padding: 0;
+			margin: 0;
+			color: #666666;
+		}
+
+		.code {
+			display: block;
+			margin: 10px;
+			height: 25vh;
+			box-sizing: border-box;
+			padding: 10px;
+			background-color: #333333;
+			color: #ffffff;
+			font-family: monospace;
+			overflow: auto;
+		}
+
+		.preview {
+			box-sizing: border-box;
+			width: 90%;
+			border: 2px solid #dddddd;
+			margin: 10px;
+			overflow: auto;
+			height: 90vh;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="left">
+			<div class="code-area">
+				<h3>HTML</h3>
+				<pre><code class="code html-code" contenteditable="true"></code></pre>
+			</div>
+			<div class="code-area">
+				<h3>CSS</h3>
+				<pre><code class="code css-code" contenteditable="true"></code></pre>
+			</div>
+			<div class="code-area">
+				<h3>JS</h3>
+				<pre><code class="code js-code" contenteditable="true"></code></pre>
+			</div>
+		</div>
+		<div class="right">
+			<iframe class="preview" srcdoc=""></iframe>
+		</div>
+	</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
