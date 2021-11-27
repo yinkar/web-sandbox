@@ -24,12 +24,12 @@ function updatePreview() {
     preview.srcdoc = pageCode;
 };
 
-htmlCodeArea.addEventListener('input', () => {
-    updatePreview();
-});
-cssCodeArea.addEventListener('input', () => {
-    updatePreview();
-});
-jsCodeArea.addEventListener('input', () => {
-    updatePreview();
+[
+    htmlCodeArea,
+    cssCodeArea,
+    jsCodeArea
+].forEach(e => {
+    e.addEventListener('input', () => {
+        updatePreview();
+    });
 });
